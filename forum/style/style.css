@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    background-color: #eee;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #536dfe;
+    padding-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+#logo {
+    float: left;
+    padding: 10px 0;
+}
+#logo img{
+    left: -110px;
+    top: 15px;
+    width: 300px;
+    position: relative;
+}
+
+nav {
+    float: right;
+}
+nav a:hover{
+    color: black;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/*basis*/
+
+#basis{
+    width: 100%;
+    min-height: 350px;
+    max-width: 1100px;
+    background-color: white;
+    margin: 0px auto;
+    position: relative;
+    top: -30px;
+    left: 100px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    z-index: 1 !important;
+}
+.loginRegister_js {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0%,0%,0%, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.loginRegister {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    max-width: 500px;
+    min-height: 200px;
+}
+.profile {
+    text-align: center;
+    color: black;
+}
+.mainprofile {
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+
+
+
+
+/*kleur thema https://material.io/color/#!/?view.left=0&view.right=0&primary.color=536DFE&secondary.color=D81B60 */
