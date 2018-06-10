@@ -16,6 +16,13 @@
 			<li><a href="?pag=">Home</a></li>
 			<li><a href="?pag=topics">Topics</a></li>
 			<?php
+				if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
+				?>
+			 	<li><a href="?pag=admin">AdminPanel</a></li>
+			 	<?php
+			} else {
+			}
+			
 			if(isset($_SESSION['username'])) {?>
 			
 			<li><a href="?pag=profile">Profile</a></li>
@@ -26,6 +33,7 @@
 				<li><a href="?pag=registreren">Registren</a></li>
 				<?php
 			}
+			
 
 			?>
 		</ul>

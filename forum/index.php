@@ -8,7 +8,7 @@
 //de afhandeling van de switch
 	switch ($gekozen) {
 		case 'topics':
-			include ('');
+			include ('topiccreator.php');
 				break;
 		case 'profile':
 			include ('profile.php');
@@ -30,7 +30,10 @@
 				break;
 		case 'nchanger';
 			include ('namechanger.php');
-				break;x
+				break;
+		case 'admin';
+			include ('admin.php');
+				break;
 //default is de index.php startpagina
 	default:
 				break;

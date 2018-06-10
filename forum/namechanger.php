@@ -1,8 +1,18 @@
 <?php
 	include ('dbconnect/db.inc.php');
 
-	if (isset($_POST)) {
-		# code...
+	if (isset($_POST[''])) {
+		$username = mysqli_real_escape_string($db, $_POST['username']);
+		$username2 = mysqli_real_escape_string($db, $_POST['username2']);
+		$checkPassword = mysqli_real_escape_string($db, $_POST['wachtwoord']);
+
+		$user_id = $_POST['user_id'];
+
+			if ($username === $username2) {
+				f_db_query($server_driver, "UPDATE users SET username = :username WHERE ID = :user", [':username' => $username, ':user' => $user_id]);
+						$_SESSION[message] = 'uw username is nu gewijzigd';
+				header("location: index.php?pag=profile");
+			}
 	}
 
 

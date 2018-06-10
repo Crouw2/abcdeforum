@@ -19,7 +19,7 @@ include ('dbconnect/db.inc.php');
 //Kijkt of beiden gelijk zijn aan het getal
 			if(mysqli_num_rows($result) == 1 && mysqli_num_rows($result2) == 1){
 //Hieronder gebeurt er dat het de username opzoekt in de database
-				$user2 = "SELECT username,email,voornaam,achternaam,ID FROM users WHERE email = '$email'";
+				$user2 = "SELECT username,email,voornaam,achternaam,ID,role FROM users WHERE email = '$email'";
 				$user = mysqli_query($db, $user2);
 //We maken de query van $user bruikbaar hieronder
 			$_SESSION = mysqli_fetch_assoc($user);
@@ -28,7 +28,10 @@ include ('dbconnect/db.inc.php');
 			}
 	}
 
-
+if(isset($_SESSION['message'])){
+			echo $_SESSION['message'];
+				unset($_SESSION['message']);
+		}
 
 
 
